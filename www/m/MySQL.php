@@ -34,7 +34,7 @@ trait MySQL
             $this->config['mysql_user'],
             $this->config['mysql_pw']
         );
-        mysql_select_db('database_name', $this->link);
+        mysql_select_db($this->config['mysql_db'], $this->link);
     }
 
     private function getConfig()

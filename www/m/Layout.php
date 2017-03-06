@@ -7,14 +7,14 @@
 namespace m;
 
 
-class Layout
+class Layout extends Object
 {
     private $html;
 
-
     public function __construct()
     {
-
+        parent::__construct();
+        $this->do();
     }
 
     public function __toString()
@@ -22,39 +22,13 @@ class Layout
         return (string) $this->html;
     }
 
-    private function getLayout()
+    private function do()
     {
-
+        $this->html = $this->getLayout();
     }
 
-    private function getHerader()
+    private function getLayout(Template $template)
     {
-
-    }
-
-
-    private function getBody()
-    {
-
-    }
-
-    private function getMenu()
-    {
-
-    }
-
-    private function getHead()
-    {
-
-    }
-
-    private function getFooter()
-    {
-
-    }
-
-    private function replace($string, $data = [])
-    {
-
+        return $template;
     }
 }

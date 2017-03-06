@@ -6,25 +6,18 @@
 
 namespace c;
 
-use m\Config;
-use m\Layout;
-use m\Params;
+use m\Object;
 
-class Index
+class Index extends Object
 {
-    private $config;
-    private $layout;
 
-    public function __construct(Config $config, Layout $layout, Params $params)
+    public function __construct()
     {
-        $this->config = $config;
-        $this->layout = $layout;
-        $this->params = $params;
+        parent::__construct();
     }
 
     public function index()
     {
-
-        echo "Hallo Werner";
+        echo $this->layout;
     }
 }
